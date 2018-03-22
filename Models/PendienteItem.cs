@@ -23,10 +23,13 @@ namespace ListaWeb.Models
         public PendienteItem()
         {
             /// El Id debe generarse a la creación de Guid
+           Guid g = Guid.NewGuid();
+           Id=g;
 
 
             /// Las tareas son para dentro de dos días 
-
+           ParaCuando =DateTime.Today.AddDays(3);
+           EstaHecha=false;
 
             
             /// Siempre las tareas deben estas no EstaHecha = false
